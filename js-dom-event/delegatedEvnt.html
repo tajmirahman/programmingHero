@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegated Event</title>
+</head>
+<body>
+    <h1>Delegated Event Explore</h1>
+    <div>
+        <ul id="list-container">
+            <li class="list">Lorem, ipsum dolor.</li>
+            <li class="list">Corporis, eos consequuntur.</li>
+            <li class="list">Laboriosam, quo sequi?</li>
+            <li class="list">Commodi, delectus obcaecati.</li>
+            <li class="list">Animi, ad assumenda!</li>
+            <li class="list">Inventore, quaerat omnis.</li>
+        </ul>
+    </div>
+    <button id="add-delegated">Add Delegated</button>
+
+    <script>
+
+        // Rule 01
+
+        // const listItem=document.getElementsByClassName('list');
+        // for(const list of listItem){
+        //     list.addEventListener('click',(event)=>{
+        //         event.target.parentNode.removeChild(event.target);
+        //     });
+        // }
+
+        // Rules 02
+        
+        const listContainer=document.getElementById('list-container');
+        listContainer.addEventListener('click',(e)=>{
+            e.target.parentNode.removeChild(e.target);
+        });
+
+        
+        
+        document.getElementById('add-delegated').addEventListener('click',(event)=>{
+            const listContainer=document.getElementById('list-container');
+            const li=document.createElement('li');
+            listContainer.appendChild(li);
+            li.innerText= 'this is another text';
+            
+        });
+    </script>
+</body>
+</html>
