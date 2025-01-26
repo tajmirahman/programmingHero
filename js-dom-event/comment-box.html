@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create comment</title>
+</head>
+<body>
+    <main>
+        <div id="comment-container">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, tempora architecto. Et nisi repudiandae ipsam commodi eaque atque provident eligendi!</p>
+            <p>Rerum reiciendis ut odit quibusdam et voluptas nisi at magnam, quaerat doloribus cum dicta esse vel voluptates! Qui, officiis omnis!</p>
+            <p>Dolor, hic error dolorum maxime aperiam ducimus eaque vero rerum quis necessitatibus sequi, laboriosam magni dolore praesentium in iusto officiis.</p>
+        </div>
+        <textarea  id="text-update" rows="5" cols="60"></textarea>
+        <button id="btn-send">Send</button>
+    </main>
+
+
+    <script>
+        document.getElementById('btn-send').addEventListener('click',()=>{
+            
+            const textUpdate=document.getElementById('text-update');
+            const inputValue=textUpdate.value;
+
+            const commentContainer=document.getElementById('comment-container');
+            
+            const newText= document.createElement('p');
+            commentContainer.appendChild(newText);
+            newText.innerText= inputValue;
+            
+            
+            newText.style.backgroundColor= 'blue';
+            newText.style.color= 'white';
+            newText.style.width= '500px';
+            newText.style.borderRadius= '20px';
+            newText.style.padding= '10px';
+            
+
+            textUpdate.value= '';
+            
+        });
+    </script>
+</body>
+</html>

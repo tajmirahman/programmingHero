@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summary</title>
+</head>
+<body>
+    
+    <h1 id="change-text">Default Text</h1>
+    <button id="click-me">Click Me & change the default text</button>
+    <h3 id="update-name">Go to find Your name</h3>
+
+    <input id="input-text" type="text">
+    <button id="btn-update">update</button><br><br>
+
+
+    <script>
+        document.getElementById('click-me').addEventListener('click',()=>{
+            document.getElementById('change-text').innerText= 'Yes i am change by add event listener button';
+            
+        });
+
+        document.getElementById('btn-update').addEventListener('click',()=>{
+            const inputText=document.getElementById('input-text');
+            const inputValue=inputText.value;
+
+            const showText=document.getElementById('update-name');
+            showText.innerText= inputValue;
+            inputText.value= '';
+        });
+
+
+
+
+    </script>
+
+    
+    
+</body>
+</html>
