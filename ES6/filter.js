@@ -18,23 +18,21 @@ const findResult=numbers.find(n=>n>70);
 // optional use for practice  /////////////
 
 
-const nums=[1,4,7,8,11,12];
-
-// const numbs=nums.filter(nums=>nums%2 === 0);
-
-let reserve=[];
-let reserveOdd=[];
-for(const num of nums){
-    if(num%2 === 0){
-        reserve.push(num);
-    }
-    else if(num%2 !== 0){
-        reserveOdd.push(num);
-    }
-}
-console.log(reserve);
-console.log(reserveOdd);
+const peoples=[
+    {name:'asik', age:20},
+    {name:'Noyon', age:28},
+    {name:'Rubel', age:30},
+]
 
 
-// console.log(numbs);
+// let sum=0;
+
+// for(const people of peoples){
+//     sum += people.age;
+    
+// }
+// console.log(sum);
+
+const totalAge=peoples.reduce((sum,person) => sum +person.age, 0);
+console.log(totalAge);
 
