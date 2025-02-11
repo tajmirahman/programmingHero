@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a search navber with loader icon</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="flex justify-center items-center mt-10">
+        <input id="search-input" type="text" class="border-2 p-1" placeholder="search text">
+        <button onclick="hendleSearch()" class="px-2 py-1 bg-green-500">Search</button>
+    </div>
+    <!-- // Spinner Loader -->
+
+    <div class="text-center mt-3">
+        <span id="spinner" class="loading loading-spinner text-secondary hidden"></span>
+    </div>
+
+    <!-- Phone container -->
+    <div id="phone-container" class="px-10 grid grid-cols-1 gap-2 lg:grid-cols-4">
+
+    </div>
+
+    <div class="text-center mt-5">
+        <button onclick="showAllButton()" class="btn bg-green-500">Show All</button>
+    </div>
+
+
+
+    <script src="practice.js"></script>
+</body>
+
+</html>

@@ -5,6 +5,8 @@
   text-align: center;
 }
 
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -16,6 +18,14 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+.student{
+  border: 2px solid pink;
+  border-radius: 20px;
+  
+  padding: 5px;
 }
 
 @keyframes logo-spin {
